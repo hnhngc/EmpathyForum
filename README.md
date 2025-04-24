@@ -6,26 +6,31 @@ A community platform focused on empathy and mental health support.
 
 ```
 EmpathyForum/
-├── client/
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── layout/
-│   │   │   ├── features/
-│   │   │   └── common/
-│   │   ├── pages/
-│   │   ├── assets/
-│   │   ├── styles/
-│   │   └── config/
-│   └── config.js
-├── server/
-│   ├── src/
-│   │   ├── controllers/
-│   │   ├── models/
-│   │   ├── routes/
-│   │   └── config/
-│   ├── .env
-│   └── index.js
-└── .gitignore
+├── README.md
+├── client
+│   ├── README.md
+│   ├── config.js
+│   ├── public
+│   ├── src
+│   │   ├── assets
+│   │   ├── components
+│   │   ├── config
+│   │   ├── pages
+│   │   ├── services
+│   │   ├── styles
+│   │   └── utils
+│   └── tests
+└── server
+    ├── README.md
+    ├── index.js
+    ├── package-lock.json
+    ├── package.json
+    └── src
+        ├── config
+        ├── controllers
+        ├── middleware
+        ├── models
+        └── routes
 ```
 
 ## Setup Instructions
