@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post</title>
+    <link rel="stylesheet" href="../../styles/landingpage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Buenard:wght@400..700&family=Manrope:wght@200..800&family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/06917677b3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header"></div>
+    <section class="main-content">
+        <main class="body-content">
+            <div class="search-bar-compo"></div>
+            <div class="create-post">
+                <input type="text" id="title" class="title" placeholder="Type catching attention title" required>
+                <input type="text" id="tags" class="tags" placeholder="Tags" required>
+                <textarea id="content" class="content" rows="10" cols="30" placeholder="Type your question" required></textarea>
+                <div class="create-post-btn">
+                    <button class="btn-add"><img src="../../assets/image.svg" class="btn-add-img" >Add image</button>
+                    <div class="btn-submit-no">
+                        <button id="cancel-btn">Cancel</button>
+                        <button id="submit-btn"><img src="../../assets/send.svg" >Publish</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <aside class="side-bar"></aside>
+    </section>   
+    <div id="footer"></div>
+</body>
+
+<style scoped>
+    .main-content {
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+        justify-content: space-evenly;
+        
+    }
+
+    .body-content {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        justify-content: space-between;
+        gap: var(--padding-l);
+        width: fit-content;
+    }
+
+    .search-bar-compo {
+        scale: 1.2;
+        width: 100%;
+        display: flex;
+        align-self: center;
+        justify-content: center;
+    }
+
+    .create-post {
+        width: 890px;
+        height: 670px;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        justify-content: space-around;
+        padding: 48px 36px;
+        border: 1px solid var(--primary-color);
+        background-color: var(--secondary-color);
+        border-radius: 7px;
+    }
+
+    input{
+        height: 40px;
+        padding: 0 10px;
+        font-size: 15px;
+        border: 1px solid #808080;
+        border-radius: 6px;
+    }
+
+    textarea {
+        height: 400px;
+        padding: 10px 10px;
+        font-size: 15px;
+        border: 1px solid #808080;
+        border-radius: 6px;
+    }
+
+    .create-post-btn {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .btn-add {
+        display: flex;
+        gap: 10px;
+        width: 150px;
+        height: 40px;
+        border-radius: 6px;
+        background-color: var(--accent-color);
+        color: var(--primary-color);
+        font-size: 20px;
+        padding: 24px 14px;
+        border: none;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .btn-submit-no {
+        display: flex;
+        gap: 35px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #cancel-btn {
+        display: flex;
+        width: 100px;
+        height: 40px;
+        border-radius: 6px;
+        background-color: #EAEAEA;
+        color: #808080;
+        font-size: 20px;
+        padding: 24px 14px;
+        border: none;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    #submit-btn {
+        display: flex;
+        gap: 10px;
+        width: 130px;
+        height: 40px;
+        border-radius: 6px;
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        font-size: 20px;
+        padding: 24px 14px;
+        border: none;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    button:hover {
+        font-size: 800;
+        transform: translateY(-2px);
+    }
+
+</style>
+<script>
+    const header = document.getElementById("header");
+    const footer = document.getElementById("footer");
+
+    fetch('../../components/layout/../../components/layout/../../components/layout/../../components/layout/../../components/layout/header.html')
+        .then(response => response.text())
+        .then(data => {
+            header.innerHTML = data;
+        })
+        .catch(error => console.error('Error loading header:', error));
+
+    // Fetch and load footer
+    fetch('../../components/layout/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            footer.innerHTML = data;
+        })
+        .catch(error => console.error('Error loading footer:', error));
+    
+    // Fetch and load side bar
+    const sideBar = document.querySelector('.side-bar');
+    fetch('../../components/features/sidebar.html')
+        .then(response => response.text())
+        .then(data => {
+            sideBar.innerHTML = data;
+        })
+        .catch(error => console.error('Error loading side bar:', error));
+    
+    // Fetch and load search bar
+    const searchBar = document.querySelector('.search-bar-compo');
+    fetch('../../components/common/search.html')
+        .then(response => response.text())
+        .then(data => {
+            searchBar.innerHTML = data;
+        })
+        .catch(error => console.error('Error loading search bar:', error));
+</script>
+</html>

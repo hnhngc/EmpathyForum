@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/landingpage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Buenard:wght@400..700&family=Manrope:wght@200..800&family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/06917677b3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="side-bar">
+        <div class="must-read">
+            <div class="must-read-title">
+                <img src="../../assets/Vector.svg"> Must-read posts
+            </div>
+            <ul class="must-read-list">
+                <li class="must-read-item">
+                    <div class="must-read-item-title">Please read rules before you start working on a platform</div>
+                </li>
+                <li class="must-read-item">
+                    <div class="must-read-item-title">Vision & Strategy of Alemhelp</div>
+                </li>
+            </ul>
+        </div>
+        <div class="must-read">
+            <div class="must-read-title">
+                <img src="../../assets/featured.svg"> Featured links
+            </div>
+            <ul class="must-read-list">
+                <li class="must-read-item">
+                    <div class="must-read-item-title">Alemhelp source-code on GitHub</div>
+                </li>
+                <li class="must-read-item">
+                    <div class="must-read-item-title">Golang best-practices</div>
+                </li>
+                <li class="must-read-item">
+                    <div class="must-read-item-title">Alem.School dashboard</div>
+                </li>
+            </ul>
+        </div>
+        <div class="tags">
+            <div class="tags-title">
+                Popular Tags
+            </div>
+            <div class="tags-list">
+                <div class="tags-item">
+                    <div class="no">1</div>
+                    <div class="tags-item-content">
+                        <div class="tags-item-title">#javascript</div>
+                        <div class="tags-item-subtitle">82,645 Posted by this tag</div>
+                    </div>
+                </div>
+                <div class="tags-item">
+                    <div class="no">2</div>
+                    <div class="tags-item-content">
+                        <div class="tags-item-title">#javascript</div>
+                        <div class="tags-item-subtitle">82,645 Posted by this tag</div>
+                    </div>
+                </div>
+                <div class="tags-item">
+                    <div class="no">3</div>
+                    <div class="tags-item-content">
+                        <div class="tags-item-title">#javascript</div>
+                        <div class="tags-item-subtitle">82,645 Posted by this tag</div>
+                    </div>
+                </div>
+                <div class="tags-item">
+                    <div class="no">4</div>
+                    <div class="tags-item-content">
+                        <div class="tags-item-title">#javascript</div>
+                        <div class="tags-item-subtitle">82,645 Posted by this tag</div>
+                    </div>
+                </div>
+                <div class="tags-item">
+                    <div class="no">5</div>
+                    <div class="tags-item-content">
+                        <div class="tags-item-title">#javascript</div>
+                        <div class="tags-item-subtitle">82,645 Posted by this tag</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<style>
+    .side-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        gap: 40px;
+        width: 330px;
+        height: 740px;
+        padding: 36px 24px;
+        background-color: #F0F4E6;
+        border-radius: 6px;
+        .must-read {
+            display: flex;
+            flex-direction: column;
+            width: 280px;
+            .must-read-title {
+                display: flex;
+                gap: 10px;
+                font-family: 'Manrope', sans-serif;
+                font-weight: 700;
+                color: #133018;
+            }
+            .must-read-list {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                font-size: 15px;
+                font-weight: 400;
+                text-decoration: underline;
+            }
+        }
+        .tags {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            width: 100%;
+            .tags-title {
+                font-family: 'Manrope', sans-serif;
+                font-weight: 700;
+                color: #133018;
+                font-size: 20px;
+            }
+            .tags-list {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                width: fit-content;
+                gap: 0;
+                .tags-item {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+                    align-items: center;
+                    justify-content: flex-start;
+                    padding: 10px 0;
+                    background-color: #F0F4E6;
+                    border-radius: 8px;
+                    font-family: 'Manrope', sans-serif;
+                    font-weight: 400;
+                    color: #133018;
+                    list-style: none;
+                    .no {
+                        font-size: 20px;
+                        font-weight: bold;
+                        color: var(--accent-color);
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 5px;
+                        background-color: var(--primary-color);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                    }
+                    .tags-item-content {
+                        display: flex;
+                        flex-direction: column;
+                        .tags-item-title {
+                            font-size: 14px;
+                            font-weight: 600;
+                            color: #133018;
+                        }
+                        .tags-item-subtitle {
+                            font-size: 12px;
+                            font-weight: 400;
+                            color: #808080;
+                        }
+                    }
+                }
+            }
+        }
+    }
+</style>
+
+</html>

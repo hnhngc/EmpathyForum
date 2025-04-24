@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setting</title>
+    <link rel="stylesheet" href="../../styles/landingpage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Buenard:wght@400..700&family=Manrope:wght@200..800&family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/06917677b3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header"></div>
+    <main class="body-content">
+        <div class="heading">
+            <div class="title">Setting</div>
+            <div class="search-bar-compo"></div>
+        </div>
+        <div class="basic-info">
+            <div class="profile-pic"></div>
+            <div class="profile-info">
+                <div class="profile-info-title">
+                    <div class="title">Basic profile</div>
+                    <p class="sub-title">Please update your profile settings here</p>
+                </div>
+                <div class="profile-item">
+                    <div class="input-profile">
+                        <label for="username">Username</label>
+                        <input type="text" id="username">
+                    </div>
+                    <div class="input-profile">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" id="fullname">
+                    </div>
+                    <div class="input-profile">
+                        <label for="email">Email</label>
+                        <input type="email" id="email">
+                    </div>
+                    <div class="input-profile">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone">
+                    </div>
+                    <div class="input-profile">
+                        <label for="bio">Biography</label>
+                        <textarea id="bio" rows="4"></textarea>
+                    </div>
+
+                </div>
+                <div class="yesno-btn">
+                    <button class="btnY">Cancle <i class="fa-solid fa-xmark" style="color: #808080;"></i></button>
+                    <button class="btnN">Save <i class="fa-solid fa-check"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="social-life">
+            <div class="noti-title">Social Profile</div>
+            <div class="social-item">
+                <label for="website">Personal Website</label>
+                <input class="input-li-1" type="text" id="website" placeholder="Personal website or portfolio url...">
+                <div class="frist-col">
+                    <div class="col-item">
+                        <label for="facebook">Facebook</label>
+                        <input class="input-li" type="text" id="facebook" placeholder="Username">
+                    </div>
+                    <div class="col-item">
+                        <label for="instagram">Instagram</label>
+                        <input class="input-li" type="text" id="instagram" placeholder="Username">
+                    </div>
+                    <div class="col-item">
+                        <label for="linkedin">LinkedIn</label>
+                        <input class="input-li" type="text" id="linkedin" placeholder="Username">
+                    </div>
+                </div>
+                <div class="frist-col">
+                    <div class="col-item">
+                        <label for="facebook">Facebook</label>
+                        <input class="input-li" type="text" id="facebook" placeholder="Username">
+                    </div>
+                    <div class="col-item">
+                        <label for="instagram">Instagram</label>
+                        <input class="input-li" type="text" id="instagram" placeholder="Username">
+                    </div>
+                    <div class="col-item">
+                        <label for="linkedin">LinkedIn</label>
+                        <input class="input-li" type="text" id="linkedin" placeholder="Username">
+                    </div>
+                </div>
+
+            </div>
+            <div class="yesno-btn">
+                <button class="btnY">Cancle <i class="fa-solid fa-xmark" style="color: #808080;"></i></button>
+                <button class="btnN">Save <i class="fa-solid fa-check"></i></button>
+            </div>
+        </div>
+        <div class="noti-pw">
+            <div class="notification">
+                <div class="noti-title">Notification</div>
+                <div class="notification-item">
+                    <input class="check-noti" type="checkbox" id="email-notification">
+                    <label for="email-notification">Email Notification</label>
+                </div>
+                <div class="notification-item">
+                    <input class="check-noti" type="checkbox" id="sms-notification">
+                    <label for="sms-notification">SMS Notification</label>
+                </div>
+                <div class="notification-item">
+                    <input class="check-noti" type="checkbox" id="push-notification">
+                    <label for="push-notification">Push Notification</label>
+                </div>
+                <div class="notification-item">
+                    <input class="check-noti" type="checkbox" id="newsletter">
+                    <label for="newsletter">Newsletter</label>
+                </div>
+                <div class="yesno-btn">
+                    <button class="btnY"><i class="fa-solid fa-xmark" style="color: #808080;"></i></button>
+                    <button class="btnN"><i class="fa-solid fa-check"></i></button>
+                </div>
+            </div>
+            <div class="change-pw">
+                <div class="title">Change Password</div>
+                <div class="change-pw-item">
+                    <label for="old-password">Current Password</label>
+                    <input type="password" id="old-password" placeholder="Password">
+                    <label for="new-password">New Password</label>
+                    <input type="password" id="new-password" placeholder="Password">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" placeholder="Confirm new password">
+                </div>
+                <div class="yesno-btn">
+                    <button class="btnY"><i class="fa-solid fa-xmark" style="color: #808080;"></i></button>
+                    <button class="btnN"><i class="fa-solid fa-check"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="deactive-account">
+            <button class="btn">Deactive Account <i class="fa-solid fa-xmark"
+                    style="color: var(--secondary-color);"></i></button>
+        </div>
+
+    </main>
+    <div id="footer"></div>
+</body>
+
+<style scoped>
+    .body-content {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        padding: var(--padding-l);
+        gap: var(--padding-l);
+        justify-content: space-evenly;
+    }
+
+    .heading {
+        display: flex;
+        padding: 32px 0;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+        justify-content: space-between;
+        border-style: none none solid none;
+        border-color: #CBD5E1;
+        border-width: 0 0 1px 0;
+    }
+
+    .profile-info-title {
+        border-style: none none solid none;
+        border-color: #CBD5E1;
+        border-width: 0 0 1px 0;
+
+    }
+
+    .notification-item {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .title {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .search-bar-compo {
+        width: fit-content;
+    }
+
+    .check-noti {
+        width: 20px;
+        height: 20px;
+        border-radius: 5px;
+        background-color: var(--secondary-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        flex-direction: row;
+
+        &:checked {
+            accent-color: var(--primary-color);
+        }
+    }
+
+    .basic-info,
+    .noti-pw {
+        display: flex;
+        flex-direction: row;
+        gap: var(--padding-m);
+        justify-content: space-around;
+        scale: 1.2;
+        padding: 30px 50px;
+    }
+
+    .notification {
+        display: flex;
+        flex-direction: column;
+        gap: var(--padding-m);
+        width: 40%;
+        justify-content: space-between;
+    }
+
+    .profile-info {
+        display: flex;
+        flex-direction: column;
+        gap: var(--padding-m);
+        justify-content: space-between;
+    }
+
+    .profile-item,
+    .social-item,
+    .change-pw-item {
+        display: flex;
+        flex-direction: column;
+        gap: var(--padding-xxs);
+        font-size: 16px;
+        font-weight: 800;
+    }
+
+    .change-pw-item {
+        padding: 20px 0;
+        font-weight: 500;
+        border-style: solid none none none;
+        border-color: #CBD5E1;
+        border-width: 1px 0 0 0;
+    }
+
+    .noti-title {
+        border-style: none none solid none;
+        border-color: #CBD5E1;
+        border-width: 0 0 1px 0;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .social-item {
+        margin: 40px 0;
+    }
+
+    .frist-col {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .input-li {
+        padding: 0 10px;
+        margin-top: 20px;
+    }
+
+    .input-li-1 {
+        width: 99%;
+        height: 48px;
+        border-radius: 5px;
+        font-size: 16px;
+        border: 1px solid var(--primary-color);
+        padding: 0 10px;
+    }
+
+    .yesno-btn {
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+        font-size: 20px;
+        border-style: solid none none none;
+        border-color: #CBD5E1;
+        border-width: 1px 0 0 0;
+        padding-top: 20px;
+
+    }
+
+    .btnN {
+        padding: 10px 20px;
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        border: none;
+        border-radius: 120px;
+        cursor: pointer;
+    }
+
+    .btnY {
+        padding: 10px 20px;
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+        border: none;
+        border-radius: 120px;
+        cursor: pointer;
+    }
+
+    .input-profile {
+        display: flex;
+        flex-direction: row;
+        gap: 186px;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    input,
+    textarea {
+        border-radius: 5px;
+        font-size: 16px;
+        height: 48px;
+        width: 610px;
+        border: 1px solid var(--primary-color);
+        padding: 0 10px;
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+    .deactive-account {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 20px 0;
+
+        .btn {
+            background-color: #FF6868;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 120px;
+            color: var(--secondary-color);
+            cursor: pointer;
+        }
+    }
+</style>
+
+<script>
+    const header = document.getElementById('header');
+    const footer = document.getElementById('footer');
+    fetch('../../components/layout/header.html')
+        .then(response => response.text())
+        .then(data => {
+            header.innerHTML = data;
+        })
+        .catch(error => console.error('Error loading header:', error));
+
+    // Fetch and load footer
+    fetch('../../components/layout/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            footer.innerHTML = data;
+        })
+        .catch(error => console.error('Error loading footer:', error));
+
+    // Fetch and load search
+    fetch('../../components/common/search.html')
+        .then(response => response.text())
+        .then(data => {
+            const searchBar = document.querySelector('.search-bar-compo');
+            searchBar.innerHTML = data;
+        })
+        .catch(error => console.error('Error loading search:', error));
+
+    // Fetch and load profile pic
+    fetch('../../components/features/profile-pic.html')
+        .then(response => response.text())
+        .then(data => {
+            const profilePic = document.querySelector('.profile-pic');
+            profilePic.innerHTML = data;
+        })
+        .catch(error => console.error('Error loading profile pic:', error));
+</script>
+
+</html>

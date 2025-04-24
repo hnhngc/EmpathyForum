@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/landingpage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Buenard:wght@400..700&family=Manrope:wght@200..800&family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/06917677b3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="cover-info">
+        <div class="info">
+            <div class="info-1">
+                <div class="picture-pic"> <img class="picture-pic-img" src="../../assets/avt.png" ></div>
+                <div class="info-profile">
+                    <div class="info-name">@Username</div>
+                    <div class="info-links">
+                        <div class="info-li-col-1">
+                            <div class="info-link">
+                                <img src="../../assets/social_ins.png" alt="clock"> Username
+                            </div>
+                            <div class="info-link">
+                                <img src="../../assets/social_x.png" alt="clock"> Username
+                            </div>
+                            <div class="info-link">
+                                <img src="../../assets/social_ytb.png" alt="clock"> Username
+                            </div>
+                        </div>
+                        <div class="info-li-col-1">
+                            <div class="info-link">
+                                <img src="../../assets/social_ins.png" alt="clock"> Username
+                            </div>
+                            <div class="info-link">
+                                <img src="../../assets/social_x.png" alt="clock"> Username
+                            </div>
+                            <div class="info-link">
+                                <img src="../../assets/social_ytb.png" alt="clock"> Username
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="info-2">
+                <p class="info-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat aliquet maecenas ut sit nullaLorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat aliquet maecenas ut sit nulla</p>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    .cover-info {
+        width: 1260px;
+        height: 450px;
+        background-color: var(--secondary-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        .info {
+            width: 1190px;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            margin: 20px 30px;
+            border-radius: 6px;
+            .info-1 {
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                margin: 20px 30px;
+                flex-direction: row;
+                width: 95%;
+                gap: 44px;
+
+                .picture-pic {
+                    width: 145px;
+                    height: 145px;
+                    .picture-pic-img {
+                        width: 145px;
+                        height: 145px;
+                    }
+                }
+                .info-profile {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding: 0 30px;
+                    width: 100%;
+                    justify-content: space-between;
+                    gap: 30px;
+                    .info-name {
+                        font-family: 'Manrope', serif;
+                        font-size: 30px;
+                        font-weight: 700;
+                        color: var(--primary-color);
+                        margin: 0;
+                    }
+                    .info-links {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: flex-start;
+                        gap: 20px;
+                        width: 100%;
+                        .info-li-col-1 {
+                            display: flex;
+                            flex-direction: row;
+                            width: 100%;
+                            justify-content: space-between;
+                            gap: 10px;
+                            .info-link {
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                                font-family: 'Manrope', serif;
+                                font-size: 16px;
+                                font-weight: 400;
+                                color: var(--primary-color);
+
+                            }
+                        }
+                    }
+                }
+            }
+            .info-2 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                .info-bio {
+                    font-family: 'Manrope', serif;
+                    padding: 0 30px;
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: var(--primary-color);
+                    text-align: start;
+                    line-height: 1.5;
+                }
+            }
+
+        }
+    }
+</style>
+</html>

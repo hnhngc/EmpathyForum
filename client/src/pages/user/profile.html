@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="../../styles/landingpage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Buenard:wght@400..700&family=Manrope:wght@200..800&family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/06917677b3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header"></div>
+    <main class="body-content">
+        <div class="title">Profile</div>
+        <div class="profile-info"></div>
+        <div class="menu-post">
+            <div class="menu-post-list">
+                <div class="menu-post-item">
+                    Mine
+                </div>
+                <div class="menu-post-item">
+                    Save
+                </div>
+                <div class="menu-post-item">
+                   Like
+                </div>
+                <div class="menu-post-item">
+                  Comment
+                </div>
+                <div class="menu-post-item">
+                   Report
+                </div>
+            </div>
+            <div class="post-part">
+                <div class="head-part">
+                    <div class="title-post">
+                        <h3 class="title-post-h3">My Posts</h3>
+                        <button class="title-post-btn">+</button>
+                    </div>
+                    <div class="search-bar-compo"></div>   
+                </div>
+                <div class="post-list">
+                    <div class="post-show">
+                        <div class="post-item"></div>
+                        <div class="post-item"></div>
+                    </div>
+                    <div class="post-show">
+                        <div class="post-item"></div>
+                        <div class="post-item"></div>
+                    </div>
+                </div>
+                <div class="post-pagination"></div>
+            </div>
+            
+
+        </div>
+    </main>
+    <div id="footer"></div>
+</body>
+<style scoped>
+    .body-content {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        padding: var(--padding-l);
+        gap: var(--padding-m);
+        justify-content: space-evenly;
+        position: relative;
+        font-family: 'Manrope', serif;
+
+    }
+
+    .title {
+        display: flex;
+        padding: 32px 0;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+        font-size: 30px;
+        font-weight: 700;
+        justify-content: space-between;
+        border-style: none none solid none;
+        border-color: #CBD5E1;
+        border-width: 0 0 1px 0;
+        margin-bottom: 50px;
+    }
+
+    .profile-info {
+        scale: 1.54;
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        width: fit-content;
+        margin: 100px 0;
+        height: fit-content;
+    }
+
+    .menu-post {
+        display: flex;
+        flex-direction: column;
+        gap: var(--padding-m);
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .menu-post-list {
+        display: flex;
+        flex-direction: row;
+        padding-top: var(--padding-l);
+        gap: var(--padding-m);
+        width: fit-content;
+        align-items: center;
+        justify-content: center;
+        font-size: 25px;
+        font-weight: 500;
+    }
+
+    .menu-post-item {
+        display: flex;
+        width: fit-content;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .menu-post-item:hover {
+        font-weight: 700;
+        transition: 0.3s;
+        transform: scale(1.1);
+    }
+
+    .post-part {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: var(--padding-m);
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .head-part {
+        display: flex;
+        flex-direction: row;
+        gap: var(--padding-m);
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .title-post {
+        display: flex;
+        flex-direction: row;
+        gap: var(--padding-m);
+        width: fit-content;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .title-post-h3 {
+        font-size: 25px;
+        font-weight: 700;
+        color: var(--primary-color);
+    }
+
+    .title-post-btn {
+        width: 45px;
+        height: 25px;
+        border-radius: 100px;
+        background-color: var(--primary-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: var(--secondary-color);
+        font-size: 20px;
+        padding: 5px 10px;
+        text-align: center;
+        border: none;
+    }
+
+    .title-post-btn:hover {
+        font-size: 800;
+        transform: translateY(-2px);
+    }
+
+    .post-list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .post-show {
+        display: flex;
+        flex-direction: row;
+        gap: var(--padding-m);
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .post-item {
+        scale: 0.85;
+    }
+
+
+    
+</style>
+<script>
+    const header = document.getElementById("header");
+    const footer = document.getElementById("footer");
+
+    fetch('../../components/layout/header.html')
+        .then(response => response.text())
+        .then(data => {
+            header.innerHTML = data;
+        })
+        .catch(error => console.error('Error loading header:', error));
+
+    // Fetch and load footer
+    fetch('../../components/layout/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            footer.innerHTML = data;
+        })
+        .catch(error => console.error('Error loading footer:', error));
+
+    // Fetch and load search bar
+    fetch('../../components/common/search.html')
+        .then(response => response.text())
+        .then(data => {
+            document.querySelector('.search-bar-compo').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading search bar:', error));
+    
+    // Fetch and load posts
+    fetch('../../components/features/post.html')
+        .then(response => response.text())
+        .then(data => {
+            // Clear existing content
+            const postListContainer = document.querySelector('.post-show');
+            postListContainer.innerHTML = '';
+
+            // Create multiple posts (e.g., 5 posts)
+            const numberOfPosts = 2;
+            for (let i = 0; i < numberOfPosts; i++) {
+                const postElement = document.createElement('div');
+                postElement.className = 'post-item';
+                postElement.innerHTML = data;
+                postListContainer.appendChild(postElement);
+            }
+        })
+        .catch(error => console.error('Error loading posts:', error));
+
+
+    // Fetch and load profile info
+    fetch('../../components/features/profile-info.html')
+        .then(response => response.text())
+        .then(data => {
+            document.querySelector('.profile-info').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading profile info:', error));
+
+    // Fetch and load pagination
+    fetch('../../components/common/pagination.html')
+        .then(response => response.text())
+        .then(data => {
+            document.querySelector('.post-pagination').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading pagination:', error));
+
+    // Listener button click event
+    const titlePostBtn = document.querySelector('.title-post-btn');
+    titlePostBtn.addEventListener('click', () => {
+        window.location.href = 'create-post.html';
+    });
+</script>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Post Card</title>
+  <style>
+    .post-card {
+      border: 1px solid #133018;
+      border-radius: 10px;
+      padding: 30px 35px;
+      width: 950px;
+      height: 220px;;
+      font-family: sans-serif;
+      background-color: #fff;
+      font-family: 'Manrope', sans-serif;
+      gap: 18px;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .post-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 16px;
+      color: #133018;
+      .post-header-title {
+        gap: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      span {
+        font-size: 12px;
+        align-self: center;
+        font-weight: 400;
+      }
+      .post-more {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+    }
+
+    .post-title {
+      font-weight: bold;
+      font-size: 18px;
+      margin: 10px 0;
+      color: #133018;
+    }
+
+    .post-content {
+      font-size: 18px;
+      color: #133018;
+      font-weight: 100;
+    }
+
+    .tags {
+      margin: 15px 0;
+      gap: 12px;
+    }
+
+    .tag {
+      background-color: #F0F4E6;
+      color: #133018;
+      border-radius: 6px;
+      padding: 5px 12px;
+      margin-right: 10px;
+      display: inline-block;
+      font-size: 14px;
+    }
+
+    .post-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      font-size: 16px;
+      color: #133018;
+    }
+
+    .post-ico-list {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      text-align: center;
+      height: fit-content;
+      width: 180px;
+      gap: 20px;
+      .post-ico-items{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 16x;
+        color: #133018;
+        .post-ico {
+        width: 18px;
+        height: 18px;
+      }
+      }
+      
+      
+    }
+  </style>
+</head>
+<body>
+
+  <div class="post-card">
+    <div class="post-header">
+      <div class="post-header-title">Golanginya /<span>5 min ago</span></div>
+      <div class="post-more"><img src="../../assets/feather_more-vertical.svg" ></div>
+    </div>
+
+    <div class="post-title">How to apply to Apple?</div>
+
+    <div class="post-content">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat aliquet maecenas ut sit nulla
+    </div>
+
+    <div class="post-footer">
+      <div class="tags">
+        <span class="tag">apple</span>
+        <span class="tag">apply</span>
+        <span class="tag">job</span>
+      </div>
+  
+      <div class="post-ico-list">
+        <div class="post-ico-items"><img class="post-ico" src="../../assets/eye.png" > 125</div>
+        <div class="post-ico-items"><img class="post-ico" src="../../assets/cmt.png" > 15</div>
+        <div class="post-ico-items"><img class="post-ico" src="../../assets/arrow-up.png" > 155</div>
+      </div>
+    </div>
+    
+  </div>
+
+</body>
+</html>

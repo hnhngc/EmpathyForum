@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/landingpage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Buenard:wght@400..700&family=Manrope:wght@200..800&family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/06917677b3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="cover-avt">
+        <div class="avt">
+            <img class="avt-img" src="../../assets/avt.png" alt="avatar">
+            <h2 class="title">@Username</h2>
+            <div class="div-break"></div>
+            <div class="social">
+                <buttton class="social-btn">
+                    <img src="../../assets/social_ins.png" alt="clock"> 
+                </buttton>
+                <buttton class="social-btn">
+                    <img src="../../assets/social_x.png" alt="clock">
+                </buttton>
+                <buttton class="social-btn">
+                    <img src="../../assets/social_ytb.png" alt="clock">
+                </buttton>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    .cover-avt {
+        width: 320px;
+        height: 450px;
+        background-color: var(--secondary-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .avt {
+       width: 270px;
+       height: 380px;
+       display: flex;
+       flex-direction: column;
+        align-items: center;
+        justify-content: center;
+       background-color: #fff;
+       .avt-img {
+        width: 200px;
+        height: 200px;
+       }
+    }
+
+    .title {
+        font-family: 'Manrope', serif;
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--primary-color);
+        
+    }
+
+    .div-break {
+        width: 230px;
+        height: 20px;
+        border-style: solid none solid none;
+        border-width: 1px;
+        border-color: #CBD5E1;
+    }
+
+    .social {
+        align-self: center;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .social-btn {
+        background-color: transparent;
+        border-radius: 50%;
+    }
+</style>
+</html>

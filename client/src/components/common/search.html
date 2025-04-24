@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/landingpage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Buenard:wght@400..700&family=Manrope:wght@200..800&family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/06917677b3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="search-bar">
+        <div class="search-input">
+            <img src="../../assets/search-ico.png" alt="search icon" class="search-icon">
+            <input type="text" placeholder="Type here to search..." class="search-text">
+        </div>
+        <div class="search-button">
+            <button class="search-btn">Search</button>
+        </div>
+    </div>
+</body>
+<style>
+    .search-bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 587px;
+        height: fit-content;
+        background-color: #ffffff;
+        border-radius: 7.5px;
+        padding: 15px 18px;
+        border: 1px solid var(--primary-color);
+        gap: 10px;
+    }
+
+    .search-input {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .search-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .search-text {
+        width: 100%;
+        border: none;
+        outline: none;
+        font-family: 'Manrope', sans-serif;
+        font-size: 16px;
+    }
+
+    .search-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 40px;
+    }
+
+    .search-btn {
+        font-family: 'Manrope', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        width: 100%;
+        height: 100%;
+        color: var(--primary-color);
+        background-color: transparent;
+        border: 2px solid var(--primary-color);
+        border-style: none none none solid;
+        cursor: pointer;
+    }
+</style>
+
+</html>

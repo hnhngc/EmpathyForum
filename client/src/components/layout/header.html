@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="../../styles/landingpage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Buenard:wght@400..700&family=Manrope:wght@200..800&family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/06917677b3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="announcement-bar">
+            <p class="announcement-text">Priority in Vietnam, Vietnam based</p>
+        </div>
+        <nav class="main-nav">
+            <div class="brand-logo"><a class="nav-link" href="../../pages/static/landingpage.html">Empathy</a></div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a class="nav-link" href="../../pages/static/about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../pages/community/community.html">Community</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../pages/user/profile.html">Profile</a></li>
+                <button class="nav-button"><img src="../../assets/bell.svg" alt="notifications" /></button>
+                <div class="nav-user">
+                    <button class="nav-button-user"><img src="../../assets/user.svg" alt="user" /></button>
+                    <div class="nav-popup">
+                        <ul class="popup-list">
+                            <li class="popup-items"><a href="../../pages/auth/signin.html">Sign In</a></li>
+                            <li class="popup-items"><a href="../../pages/auth/signup.html">Sign Up</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </ul>
+        </nav>
+    </header>
+</body>
+<script>
+    document.querySelector('.nav-button-user').addEventListener('click', function() {
+        document.querySelector('.nav-popup').classList.toggle('show');
+        document.querySelector('.nav-popup').classList.toggle('active');
+        document.querySelector('.nav-button-user').classList.toggle('active');
+        document.querySelector('.popup-items').classList.toggle('active');
+    });
+
+</script>
+</html>

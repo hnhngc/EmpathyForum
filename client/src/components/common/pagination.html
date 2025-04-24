@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/landingpage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Buenard:wght@400..700&family=Manrope:wght@200..800&family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/06917677b3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="pagination-item">
+        <span aria-current="page" class="page-numbers current">1</span>
+        <a class="page-numbers" href="javascript:;">2</a>
+        <a class="page-numbers" href="javascript:;">3</a>
+        <a class="page-numbers" href="javascript:;">4</a>
+        <a class="page-numbers" href="javascript:;">5</a>
+        <a class="page-numbers" href="javascript:;">6</a>
+    </div>
+</body>
+<style>
+    .pagination-item {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+        font-weight: 600;
+
+        .page-numbers {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            font-size: 16px;
+            cursor: pointer;
+
+            &:hover,
+            &.current {
+                background-color: var(--accent-color);
+                color: var(--primary-color);
+            }
+        }
+    }
+</style>
+
+</html>

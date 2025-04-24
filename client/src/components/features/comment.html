@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Post Card</title>
+    <link rel="stylesheet" href="../../styles/landingpage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Buenard:wght@400..700&family=Manrope:wght@200..800&family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/06917677b3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="comment-container">
+        <div class="content main-comment">
+            <div class="cmt-header">
+                <div class="post-header-title">Golanginya /<span>5 min ago</span></div>
+                <div class="post-more"><img src="../../assets/feather_more-vertical.svg"></div>
+            </div>
+            <div class="cmt-content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat aliquet maecenas ut sit nulla
+            </div>
+            <div class="cmt-footer">
+                <div class="like-ico">
+                    <div class="like-ico-items"><img class="post-ico" src="../../assets/like.svg"> 155</div>
+                    <div class="like-ico-items"><img class="post-ico" src="../../assets/dislike.svg"> 155</div>
+                </div>
+                <div class="reply"><img class="post-reply" src="../../assets/reply.svg">Reply</div>
+            </div>
+        </div>
+        <div class="replies-container"></div>
+    </div>
+</body>
+
+<style scoped>
+    .content {
+        width: 780px;
+        height: 130px;
+        background-color: var(--secondary-color);
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-family: 'Manrope', sans-serif;
+        padding: 20px 30px;
+        border-radius: 10px;
+        align-self: center;
+        margin: 15px;
+        margin-bottom: 0;
+    }
+
+    .cmt-header {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--primary-color);
+
+        .post-header-title {
+            gap: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        span {
+            font-size: 10px;
+            align-self: center;
+            font-weight: 500;
+        }
+
+        .post-more img {
+            width: 18px;
+            height: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+    }
+    .cmt-content {
+        font-size: 16px;
+        color: #133018;
+        padding: 10px 0;
+    }
+    .cmt-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        font-size: 12px;
+        color: var(--primary-color);
+
+        .like-ico {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            text-align: center;
+            height: fit-content;
+            width: 180px;
+            gap: 20px;
+
+            .like-ico-items {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                font-size: 16x;
+                color: var(--primary-color);
+
+                .post-ico {
+                    width: 15px;
+                    height: 15px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .reply {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            .post-reply {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+
+    .comment-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .replies-container {
+        margin-left: 50px; 
+        width: fit-content;
+    }
+
+    .content-reply {
+        width: 730px;
+        height: 120px;
+        background-color: transparent;
+        border: solid none none none;
+        border-style: none none none solid;
+        border-color: var(--primary-color);
+        border-width: 0 0 0 3px;
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-family: 'Manrope', sans-serif;
+        padding: 0 30px;
+        padding-top: 10px;
+        align-self: flex-end;
+        color: var(--primary-color);
+    }
+
+
+    .reply-input {
+        width: calc(100% - 40px);
+        margin-left: 40px;
+        margin-top: 10px;
+        border: 1px solid #808080;
+        border-radius: 50px;
+        background-color: transparent;
+        padding: 10px 20px;
+    }
+</style>
+
+<script>
+    // Add reply functionality
+    const replyButton = document.querySelector('.reply');
+    const replyInput = document.createElement('input');
+    replyInput.type = 'text';
+    replyInput.placeholder = 'Type your answer...';
+    replyInput.className = 'reply-input';
+    replyButton.addEventListener('click', () => {
+        if (replyButton.nextSibling === replyInput) {
+            replyButton.nextSibling.remove();
+        } else {
+            replyButton.parentNode.insertBefore(replyInput, replyButton.nextSibling);
+            replyInput.focus();
+            replyButton.style.display = 'none';
+        }
+    });
+    replyInput.addEventListener('blur', () => {
+        if (replyInput.value) {
+            const repliesContainer = document.querySelector('.replies-container');
+            const replyComment = createReplyComment(replyInput.value);
+            repliesContainer.appendChild(replyComment);
+        }
+        replyInput.remove();
+        replyButton.style.display = 'flex';
+    });
+
+    function createReplyComment(content) {
+        const replyComment = document.createElement('div');
+        replyComment.className = 'reply-comment';
+        replyComment.innerHTML = `
+            <div class="content-reply">
+                <div class="cmt-header">
+                    <div class="post-header-title">Golanginya /<span>just now</span></div>
+                    <div class="post-more"><img src="../../assets/feather_more-vertical.svg"></div>
+                </div>
+                <div class="cmt-content">${content}</div>
+                <div class="cmt-footer">
+                    <div class="like-ico">
+                        <div class="like-ico-items"><img class="post-ico" src="../../assets/like.svg"> 0</div>
+                        <div class="like-ico-items"><img class="post-ico" src="../../assets/dislike.svg"> 0</div>
+                    </div>
+                    <div class="reply"><img class="post-reply" src="../../assets/reply.svg">Reply</div>
+                </div>
+            </div>
+        `;
+        return replyComment;
+    }
+</script>
+
+</html>

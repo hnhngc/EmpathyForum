@@ -1,0 +1,51 @@
+:root {
+    --primary-color: #123E23;
+    --secondary-color: #F0F4E6;
+    --accent-color: #DDF4A6;
+    --background-color: #FCFCF4;
+    --primary-font: 'Buenard';
+    --secondary-font: 'Manrope';
+    --logo-font: 'MuseoModerno';
+    --h1-size: 40px;
+    --h2-size: 32px;
+    --h1-sub-size: 24px;
+    --p-size: 20px;
+    --padding-l: 80px;
+    --padding-ml: 44px;
+    --padding-m: 32px;
+    --padding-s: 24px;
+    --padding-xs: 16px;
+    --padding-xxs: 12px;
+
+}
+
+body {
+    font-family: var(--secondary-font);
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    font-weight: 200;
+    margin: 0;
+    padding: 0;
+
+}
+
+section {
+    padding: var(--padding-l);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+h1 {
+    font-family: var(--primary-font);
+    font-size: var(--h1-size);
+    font-weight: 500;
+}
+
+h2 {
+    font-family: var(--primary-font);
+    font-size: var(--h2-size);
+    font-weight: 200;
+}
